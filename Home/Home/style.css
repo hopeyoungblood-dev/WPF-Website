@@ -1,0 +1,407 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --wpf-blue: #003087;
+  --wpf-green: #00843d;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2933;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+/* Sticky Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%;
+  padding: 12px 5%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.site-logo {
+  display: block;
+  height: 82px;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 28px;
+  flex: 1;
+  min-width: 0;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.main-nav a {
+  color: var(--wpf-blue);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.main-nav a:hover {
+  color: var(--wpf-green);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 170px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  padding: 8px 0;
+  z-index: 1001;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.header-button {
+  display: inline-block;
+  padding: 10px 18px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 999px;
+  border: 2px solid var(--wpf-green);
+  background: var(--wpf-green);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.header-button:hover {
+  background: #006b31;
+  border-color: #006b31;
+}
+
+/* Hero + Current Initiative */
+
+.hero {
+  padding: 80px 6%;
+  background: #eef6ef;
+}
+
+.hero-layout {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(340px, 0.75fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 760px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Main Hero Text */
+
+.hero-name {
+  margin: 0 0 8px;
+  color: var(--wpf-blue);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.hero h1 {
+  margin: 0 0 20px;
+  color: var(--wpf-green);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.hero-text {
+  max-width: 680px;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+/* Current Initiative Card */
+
+.initiative-card {
+  padding: 34px;
+  background: #ffffff;
+  border-radius: 22px;
+  border-left: 10px solid var(--wpf-green);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.section-label {
+  margin: 0 0 8px;
+  color: var(--wpf-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+}
+
+.initiative-card h2 {
+  margin: 0 0 14px;
+  color: var(--wpf-blue);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.1;
+}
+
+.initiative-card p {
+  margin: 0 0 24px;
+  font-size: 1.05rem;
+}
+
+.primary-button {
+  display: inline-block;
+  padding: 14px 24px;
+  background: var(--wpf-green);
+  color: #ffffff;
+  border: 2px solid var(--wpf-green);
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.primary-button:hover {
+  background: #006b31;
+  border-color: #006b31;
+}
+
+/* Park Info Section */
+
+.park-info-section {
+  padding: 70px 6%;
+  background: #ffffff;
+}
+
+.park-info-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.park-info-wrapper h2 {
+  margin: 0 0 18px;
+  color: var(--wpf-blue);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+}
+
+.park-info-wrapper p {
+  margin: 0 auto;
+  max-width: 780px;
+  font-size: 1.15rem;
+}
+
+/* Programs Section */
+
+.programs-section {
+  padding: 75px 6%;
+  background: #f5f8f4;
+}
+
+.programs-wrapper {
+  max-width: 1150px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.programs-wrapper h2 {
+  margin: 0 0 18px;
+  color: var(--wpf-blue);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+}
+
+.programs-intro {
+  max-width: 850px;
+  margin: 0 auto 38px;
+  font-size: 1.15rem;
+}
+
+.program-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  text-align: left;
+}
+
+.program-card {
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 20px;
+  border-top: 6px solid var(--wpf-green);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.program-card h3 {
+  margin: 0 0 12px;
+  color: var(--wpf-blue);
+  font-size: 1.35rem;
+}
+
+.program-card p {
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+/* Tablet */
+
+@media (max-width: 1180px) {
+  .site-header {
+    align-items: center;
+  }
+
+  .header-right {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 14px;
+  }
+}
+
+/* Medium Screens */
+
+@media (max-width: 1100px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero-content {
+    max-width: 850px;
+  }
+
+  .initiative-card {
+    max-width: 700px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 850px) {
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .site-logo {
+    height: 76px;
+  }
+
+  .header-right {
+    align-items: center;
+  }
+
+  .main-nav {
+    justify-content: center;
+  }
+
+  .header-buttons {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 60px 6%;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-text {
+    margin: 0 auto;
+  }
+
+  .initiative-card {
+    text-align: center;
+    padding: 30px;
+  }
+
+  .park-info-section {
+    padding: 55px 6%;
+  }
+
+  .programs-section {
+    padding: 55px 6%;
+  }
+
+  .program-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .program-card {
+    text-align: center;
+  }
+}
