@@ -1,0 +1,286 @@
+:root {
+  --wpf-blue: #003087;
+  --wpf-green: #00843d;
+  --text: #1f2933;
+  --light-bg: #f4f7f5;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--wpf-blue);
+}
+
+/* HEADER */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--white);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.site-logo {
+  display: block;
+  height: 60px;
+  width: auto;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: auto;
+  margin-right: 24px;
+  flex-shrink: 0;
+}
+
+.main-nav a {
+  color: var(--wpf-blue);
+  text-decoration: none;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.main-nav a:hover {
+  color: var(--wpf-green);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background: var(--white);
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 48, 135, 0.12);
+  padding: 10px 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.header-btn {
+  background: var(--wpf-blue);
+  color: var(--white);
+  padding: 10px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.header-btn:hover {
+  background: var(--wpf-green);
+  color: var(--white);
+}
+
+/* JOIN PAGE */
+
+.join-hero {
+  background: var(--light-bg);
+  padding: 55px 20px;
+}
+
+.join-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--wpf-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  color: var(--wpf-blue);
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 0 0 20px;
+}
+
+.intro {
+  font-size: 20px;
+  max-width: 620px;
+}
+
+.join-card {
+  background: var(--white);
+  padding: 26px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 48, 135, 0.14);
+}
+
+.join-card h2 {
+  color: var(--wpf-blue);
+  margin: 0 0 10px;
+  font-size: 28px;
+}
+
+.join-card p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 20px 0 0;
+}
+
+.membership-button {
+  display: block;
+  width: 100%;
+  padding: 14px 10px;
+  border: 2px solid var(--wpf-blue);
+  border-radius: 12px;
+  background: var(--white);
+  color: var(--wpf-blue);
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.membership-button:hover {
+  background: var(--wpf-blue);
+  color: var(--white);
+}
+
+.membership-button span {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 20px;
+}
+
+/* INFO SECTION */
+
+.info-section {
+  padding: 60px 20px;
+  background: var(--white);
+}
+
+.info-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.info-container h2 {
+  color: var(--wpf-blue);
+  font-size: 32px;
+  margin-top: 0;
+}
+
+.info-container h3 {
+  color: var(--wpf-green);
+  font-size: 22px;
+  margin-top: 32px;
+}
+
+.info-container p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
+  .header-buttons {
+    margin-left: auto;
+  }
+
+  .site-logo {
+    height: 52px;
+  }
+
+  .join-container {
+    grid-template-columns: 1fr;
+  }
+
+  .membership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  .intro {
+    font-size: 18px;
+  }
+
+  .join-card {
+    padding: 24px;
+  }
+}
